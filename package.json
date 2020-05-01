@@ -21,13 +21,15 @@
     "pg-native": "^3.0.0",
     "posix": "^4.1.2",
     "sync-request": "^6.1.0",
-    "verror": "^1.10.0"
+    "verror": "^1.10.0",
+    "snyk": "^1.316.1"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Test-Mode\" && nodejs https.js test",
-    "start": "echo \"Starting Server...\" && nodejs https.js"
+    "start": "echo \"Starting Server...\" && nodejs https.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -49,5 +51,6 @@
   "bugs": {
     "url": "https://github.com/iudx/iudx-auth-server/issues"
   },
-  "homepage": "https://auth.iudx.org.in"
+  "homepage": "https://auth.iudx.org.in",
+  "snyk": true
 }
